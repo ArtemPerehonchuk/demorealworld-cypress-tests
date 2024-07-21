@@ -38,6 +38,7 @@ This repository contains Cypress tests for the Demorealworld website, using Fake
 ## Steps to Launch
 
 To open the Cypress Test Runner, run:
+
     ```bash
     npm run cy:open
     ```
