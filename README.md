@@ -32,6 +32,7 @@ Open the Cypress Test Runner, run:
     ```bash
     npm run cy:open
     ```
+    
 
 To run tests with different viewport sizes:
 
