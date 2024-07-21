@@ -1,4 +1,4 @@
-const Page = require('../../../redmine-playwright-tests/pages/page');
+const Page = require('./page');
 
 const emailFieldSelector = '[placeholder="Email"]';
 const passwordFieldSelector = '[type="password"]';
