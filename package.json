@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.13.1",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  },
+  "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:run:chrome": "npx cypress run --browser chrome --reporter mochawesome",
+    "cy:run:large": "npx cypress run --config-file cypress.config.large.js",
+    "cy:run:medium": "npx cypress run --config-file cypress.config.medium.js",
+    "cy:run:small": "npx cypress run --config-file cypress.config.small.js",
+    "clean:results": "rm -rf cypress/results/* || true",
+    "merge:reports": "mochawesome-merge cypress/results/*.json > cypress/results/merged-report.json",
+    "generate:report": "marge cypress/results/merged-report.json -o cypress/results",
+    "open:report": "open cypress/results/merged-report.html"
+  },
+  "include": [
+    "./node_modules/cypress",
+    "cypress/**/*.js"
+  ]
+}

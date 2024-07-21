@@ -1,0 +1,47 @@
+name: Demorealworld Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Clean previous results
+        run: |
+          npm run clean:results
+
+      - name: Run Cypress tests
+        run: |
+          npm run cy:run:chrome
+
+      - name: Merge Mochawesome reports
+        run: |
+          npm run merge:reports
+
+      - name: Generate final report
+        run: |
+          npm run generate:report
+
+      - name: Upload Mochawesome Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: mochawesome-report
+          path: cypress/results/merged-report.html
