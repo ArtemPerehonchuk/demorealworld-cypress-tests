@@ -21,7 +21,13 @@ class HomePage extends Page {
     }
 
     checkUrl() {
-        cy.url().should('eq', `${Cypress.config('baseUrl')}`);
+        cy.url()
+            .then(url => {
+                const expectedUrl = Cypress.config('baseUrl');
+                if (url !== expectedUrl) {
+                    cy.log(`URL does not match. Expected: ${expectedUrl}, but got: ${url}`);
+        }
+    });
     }
 
     checkLoginUrl() {

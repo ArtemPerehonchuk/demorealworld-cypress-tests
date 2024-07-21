@@ -27,12 +27,12 @@ This repository contains Cypress tests for the Demorealworld website, using Fake
 
 ## Steps to Launch
 
-Open the Cypress Test Runner, run:
+1. Open the Cypress Test Runner, run:
     ```bash
     npm run cy:open
     ```
 
-To run tests with different viewport sizes:
+2. To run tests with different viewport sizes:
 
 - **Large viewport size:**
     ```bash
@@ -49,7 +49,7 @@ To run tests with different viewport sizes:
     npm run cy:run:small
     ```
 
-Run tests using Chrome as the default browser and create a Mochawesome report:
+3. Run tests using Chrome as the default browser and create a Mochawesome report:
     ```bash
     npm run cy:run:chrome
     ```
