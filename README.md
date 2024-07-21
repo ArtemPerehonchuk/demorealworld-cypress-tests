@@ -10,7 +10,7 @@ This repository contains Cypress tests for the Demorealworld website, using Fake
 - npm (version 8 or higher)
 - Cypress (version 13.13.1)
 - Faker (version 8.4.1)
-
+- Mochawesome (version 7.1.3)
 
 ## Steps to Install
 
@@ -25,20 +25,9 @@ This repository contains Cypress tests for the Demorealworld website, using Fake
     npm install
     ```
 
-3. Install Faker:
-    ```bash
-    npm install @faker-js/faker --save-dev
-    ```
-
-4. Install Mochawesome:
-    ```bash
-    npm install mochawesome mochawesome-merge mochawesome-report-generator --save-dev
-    ```
-
 ## Steps to Launch
 
-To open the Cypress Test Runner, run:
-
+Open the Cypress Test Runner, run:
     ```bash
     npm run cy:open
     ```
@@ -60,7 +49,7 @@ To run tests with different viewport sizes:
     npm run cy:run:small
     ```
 
-To run tests using Chrome as the default browser and creating mochawesome report, use:
+Run tests using Chrome as the default browser and create a Mochawesome report:
     ```bash
     npm run cy:run:chrome
     ```
@@ -79,23 +68,22 @@ To generate a merged Mochawesome report:
     npm run cy:run:chrome
     ```
 
-2. Merge the test reports:
+3. Merge the test reports:
     ```bash
     npm run merge:reports
     ```
 
-3. Generate the HTML report:
+4. Generate the HTML report:
     ```bash
     npm run generate:report
     ```
 
-4. Open the HTML report:
+5. Open the HTML report:
     ```bash
     npm run open:report
-    ````
+    ```
 
-
-The merged report will be available in the `cypress/results` directory and open in the browser.
+The merged report will be available in the `cypress/results` directory and can be opened in the browser.
 
 ## Project Structure
 
