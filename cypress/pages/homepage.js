@@ -8,7 +8,7 @@ const eosTagSelector = ('.sidebar > .tag-list > :nth-child(1)');
 const paginatorSelector = ('.pagination');
 const selectedTagSelector = ('[ng-show="$ctrl.listConfig.filters.tag"] > .nav-link');
 const secontPageSelector = (':nth-child(2) > .page-link');
-const eosTagInArticleSelector = ('cy.get(":nth-child(10) > .article-preview > .preview-link > .tag-list > :nth-child(3)")');
+const eosTagInArticleSelector = (':nth-child(10) > .article-preview > .preview-link > .tag-list > :nth-child(3)');
 
 class HomePage extends Page {
 
