@@ -9,5 +9,6 @@ describe('Demo.realworld.io test', () => {
         homePage.checkSelectedTag();
         homePage.scrollToPaginator();
         homePage.clickSecondPage();
+        homePage.checkTagInArticle();
     })
 })
