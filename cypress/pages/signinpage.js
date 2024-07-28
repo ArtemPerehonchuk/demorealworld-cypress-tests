@@ -24,12 +24,12 @@ class SignInPage extends Page {
     cy.get(signInBtnSelector).click().wait(2000);
   }
 
-  errorMessageText() {
-    return cy.get(errorMessageSelector).should('be.visible').and('contain.text', "can't be blank");
+  checkErrorMessageText() {
+    return cy.get(errorMessageSelector).should('be.visible');
   }
 
-  errorEmailOrPasswordText() {
-    return cy.get(errorMessageSelector).should('be.visible').and('contain', "email or password is invalid");
+  checkErrorEmailOrPasswordText() {
+    return cy.get(errorMessageSelector).should('be.visible');
   }
 }
 

@@ -14,31 +14,31 @@ describe('Sign up tests', () => {
         homePage.clickSignUpLink();
     })
 
-    it('test case D01N: Should sign up with empty username field', () => {
+    it('test case D01N: Should not sign up with empty username field', () => {
         const signUpPage = new SignUpPage;
 
         signUpPage.fillEmail(randomEmail);
         signUpPage.fillPassword(randomPassword);
         signUpPage.clickSignUpBtn();
-        signUpPage.errorMessageText().should('be.visible');
+        signUpPage.checkErrorMessageText();
     })
 
-    it('test case D02N: Should sign up with empty password field', () => {
+    it('test case D02N: Should not sign up with empty password field', () => {
         const signUpPage = new SignUpPage;
 
         signUpPage.fillEmail(randomEmail);
         signUpPage.fillUsername(randomUsername);
         signUpPage.clickSignUpBtn();
-        signUpPage.errorMessageText().should('be.visible');
+        signUpPage.checkErrorMessageText();
     })
 
-    it('test case D03N: Should sign up with empty password field', () => {
+    it('test case D03N: Should not sign up with empty password field', () => {
         const signUpPage = new SignUpPage;
 
         signUpPage.fillUsername(randomUsername);
         signUpPage.fillPassword(randomPassword);
         signUpPage.clickSignUpBtn();
-        signUpPage.errorMessageText().should('be.visible');
+        signUpPage.checkErrorMessageText();
     })
 
     it('test case D04P: Should sign up with valid credentials', () => {

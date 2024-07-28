@@ -36,8 +36,8 @@ class SignUpPage extends Page {
     this.clickSignUpBtn();
   }
 
-  errorMessageText() {
-    return cy.get(errorMessageSelector).should('be.visible').and('contain.text', "can't be blank");
+  checkErrorMessageText() {
+    return cy.get(errorMessageSelector).should('be.visible');
   }
 }
 

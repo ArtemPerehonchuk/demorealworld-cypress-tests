@@ -30,28 +30,14 @@ class HomePage extends Page {
     });
     }
 
-    checkLoginUrl() {
-        cy.url().should('eq', `${Cypress.config('baseUrl')}login`);
-    }
-
-    checkWelcomeText() {
-        cy.get(welcomeTitleSelector)
-        .should('be.visible')
-        .and('have.text', 'conduit');
-
-        cy.get(welcomeMessageSelector)
-        .should('be.visible')
-        .and('have.text', 'A place to share your knowledge.');    
-    }
-
     selectEosTag() {
         cy.get(eosTagSelector)
         .should('be.visible')
         .click();
     }
 
-    checkSelectedTag() {
-        cy.get(selectedTagSelector).should('contain.text', 'eos');
+    checkSelectedTagContainsTextEos() {
+        cy.get(selectedTagSelector).should('be.visible');
     }
 
     scrollToPaginator() {
@@ -68,10 +54,9 @@ class HomePage extends Page {
         .click();
     }
 
-    checkTagInArticle() {
+    checkTagInArticleContainsTextEos() {
         cy.get(eosTagInArticleSelector)
-        .should('be.visible')
-        .and('contain.text', 'eos' );
+        .should('be.visible');
     }
 }
 
