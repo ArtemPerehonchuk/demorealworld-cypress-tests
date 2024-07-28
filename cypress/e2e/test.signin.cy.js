@@ -14,38 +14,38 @@ describe('Sign in tests', () => {
     homePage.clickSignInLink();
   })
 
-  it('test case D05N: should sign in with empty email field', () => {
+  it('test case D05N: should not sign in with empty email field', () => {
     const signInPage = new SignInPage();
 
     signInPage.fillPassword(randomPassword);
     signInPage.clickSignInBtn();
-    signInPage.errorMessageText();
+    signInPage.checkErrorMessageText();
   });
 
-  it('test case D06N: should sign in invalid password', () => {
+  it('test case D06N: should not sign in with invalid password', () => {
     const signInPage = new SignInPage();
 
     signInPage.fillEmail(userEmail);
     signInPage.fillPassword(randomPassword);
     signInPage.clickSignInBtn();
-    signInPage.errorEmailOrPasswordText();
+    signInPage.checkErrorEmailOrPasswordText();
   });
 
-  it('test case D07N: should sign in with empty password field', () => {
+  it('test case D07N: should not sign in with empty password field', () => {
     const signInPage = new SignInPage();
     
     signInPage.fillEmail(randomEmail);
     signInPage.clickSignInBtn();
-    signInPage.errorMessageText();
+    signInPage.checkErrorMessageText();
   });
 
-  it('test case D08N: should sign in with invalid email', () => {
+  it('test case D08N: should not sign in with invalid email', () => {
     const signInPage = new SignInPage();
 
     signInPage.fillEmail(randomEmail);
     signInPage.fillPassword(userPassword);
     signInPage.clickSignInBtn();
-    signInPage.errorEmailOrPasswordText();
+    signInPage.checkErrorEmailOrPasswordText();
   });
 
   it('test case D09N: should sign in with valid credentials', () => {

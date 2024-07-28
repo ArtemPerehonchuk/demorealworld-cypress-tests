@@ -6,9 +6,9 @@ describe('Demo.realworld.io test', () => {
 
         homePage.navigate('/');
         homePage.selectEosTag();
-        homePage.checkSelectedTag();
+        homePage.checkSelectedTagContainsTextEos();
         homePage.scrollToPaginator();
         homePage.clickSecondPage();
-        homePage.checkTagInArticle();
+        homePage.checkTagInArticleContainsTextEos();
     })
 })

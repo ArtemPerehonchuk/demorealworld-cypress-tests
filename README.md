@@ -6,11 +6,11 @@ This repository contains Cypress tests for the Demorealworld website, using Fake
 
 ## Requirements
 
-- Node.js (version 16 or higher)
-- npm (version 8 or higher)
-- Cypress (version 13.13.1)
-- Faker (version 8.4.1)
-- Mochawesome (version 7.1.3)
+- Node.js 
+- npm 
+- Cypress 
+- Faker 
+- Mochawesome 
 
 ## Steps to Install
 
